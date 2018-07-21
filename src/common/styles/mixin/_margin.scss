@@ -1,0 +1,7 @@
+@mixin marginBottom($value) {
+	margin-bottom: $value + px;
+}
+
+@mixin marginRight($value) {
+	margin-right: $value + px;
+}

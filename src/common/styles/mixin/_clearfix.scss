@@ -1,0 +1,11 @@
+@mixin clearfix {
+	zoom : 1;
+	&:after {
+		display: block;
+		clear: both;
+		height: 0;
+		visibility: hidden;
+		line-height: 0;
+		content: ".";
+	}
+}
