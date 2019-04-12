@@ -74,8 +74,8 @@ gulp.task('webpack', () => {
   .on('error', function handleError() {
   this.emit('end');
   })
-  .pipe(gulpif(!isProd, gulp.dest(destDir)))
-  .pipe(gulpif(isProd, gulp.dest(prodDir)))
+  .pipe(gulpif(!isProd, gulp.dest(destDir + 'js/')))
+  .pipe(gulpif(isProd, gulp.dest(prodDir + 'js/')))
 });
 
 

@@ -5,7 +5,7 @@ module.exports = {
   entry: './src/pc/js/app.js',
   mode: 'production',
   output: {
-    path: path.resolve(__dirname, 'dist/js/riot/'),
+    path: path.resolve(__dirname, ''),
     filename: 'riotApp.js'
   },
   module: {
