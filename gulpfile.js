@@ -36,7 +36,7 @@ gulp.task('browser-sync', () => {
 });
 
 gulp.task('sass', () => {
-  return gulp.src(['src/pc/styles/**/*.scss'])
+  return gulp.src(['src/styles/**/*.scss'])
   .pipe(plumber({
     errorHandler: notify.onError('Error: <%= error.message %>')
   }))
@@ -57,14 +57,14 @@ gulp.task('sass', () => {
 
 
 gulp.task('html', () => {
-  return gulp.src(['src/pc/html/**/*.html'])
+  return gulp.src(['src/html/**/*.html'])
   .pipe(gulpif(!isProd, gulp.dest(destDir + '/')))
   .pipe(gulpif(isProd, gulp.dest(prodDir + '/')))
 });
 
 
 gulp.task('images', () => {
-  return gulp.src(['src/pc/images/**/'])
+  return gulp.src(['src/images/**/*'])
   .pipe(gulpif(!isProd, gulp.dest(destDir + 'images/')))
   .pipe(gulpif(isProd, gulp.dest(prodDir + 'images/')))
 });
@@ -93,25 +93,25 @@ gulp.task('build', gulp.series(
 
 gulp.task('default', gulp.series(
   gulp.parallel('browser-sync', 'sass', 'webpack', 'html', 'images', () => {
-    watch(['src/pc/styles/**/*.scss'], () => {
+    watch(['src/styles/**/*.scss'], () => {
       return runSequence(
         'sass',
         'bs-reload'
       );
     });
-    watch(['src/pc/tags/**/*.tag', 'src/pc/js/app.js'], () => {
+    watch(['src/tags/**/*.tag', 'src/js/app.js'], () => {
       return runSequence(
         'webpack',
         'bs-reload'
       );
     });
-    watch(['src/pc/images/**/*'], () => {
+    watch(['src/images/**/*'], () => {
       return runSequence(
         'images',
         'bs-reload'
       );
     });
-    watch(['src/pc/html/**/*'], () => {
+    watch(['src/html/**/*'], () => {
       return runSequence(
         'html',
         'bs-reload'

@@ -2,7 +2,7 @@ const webpack = require('webpack');
 const path = require('path');
 
 module.exports = {
-  entry: './src/pc/js/app.js',
+  entry: './src/js/app.js',
   mode: 'production',
   output: {
     path: path.resolve(__dirname, ''),
