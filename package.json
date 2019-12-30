@@ -1,6 +1,6 @@
 {
   "name": "riot_template",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -9,8 +9,8 @@
     "prod": "npx gulp build --env prod",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Black-Yamasan",
+  "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.7.7",
     "@babel/preset-env": "^7.7.7",
