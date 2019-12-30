@@ -24,7 +24,7 @@ const config = {
 }
 const options = minimist(process.argv.slice(2), config);
 
-let isProd = (options.env === 'prod') ? true : false;
+let isProd = (options.env === 'prod');
 console.log('[build env]', options.env, '[isProd]', isProd);
 
 gulp.task('browser-sync', () => {
@@ -47,12 +47,12 @@ gulp.task('sass', () => {
     path.dirname = 'css'
   }))
   .pipe(autoprefixer({
-    browsers: ['last 2 version', 'iOS >= 9', 'Android >= 4.6'],
+    overrideBrowserslist: ['last 2 version'],
     cascade: false
   }))
   .pipe(gulpif(isProd, cleanCss()))
-  .pipe(gulpif(!isProd, gulp.dest(destDir)))
-  .pipe(gulpif(isProd, gulp.dest(prodDir)))
+  .pipe(gulpif(!isProd, gulp.dest(destDir + 'assets/')))
+  .pipe(gulpif(isProd, gulp.dest(prodDir + 'assets/')))
 });
 
 
@@ -65,17 +65,17 @@ gulp.task('html', () => {
 
 gulp.task('images', () => {
   return gulp.src(['src/images/**/*'])
-  .pipe(gulpif(!isProd, gulp.dest(destDir + 'images/')))
-  .pipe(gulpif(isProd, gulp.dest(prodDir + 'images/')))
+  .pipe(gulpif(!isProd, gulp.dest(destDir + 'assets/images/')))
+  .pipe(gulpif(isProd, gulp.dest(prodDir + 'assets/images/')))
 });
 
 gulp.task('webpack', () => {
   return webpackStream(webpackConfig, webpack)
   .on('error', function handleError() {
-  this.emit('end');
+    this.emit('end');
   })
-  .pipe(gulpif(!isProd, gulp.dest(destDir + 'js/')))
-  .pipe(gulpif(isProd, gulp.dest(prodDir + 'js/')))
+  .pipe(gulpif(!isProd, gulp.dest(destDir)))
+  .pipe(gulpif(isProd, gulp.dest(prodDir)))
 });
 
 
@@ -99,7 +99,7 @@ gulp.task('default', gulp.series(
         'bs-reload'
       );
     });
-    watch(['src/tags/**/*.tag', 'src/js/app.js'], () => {
+    watch(['src/riot/**/*.riot', 'src/js/**/*.js'], () => {
       return runSequence(
         'webpack',
         'bs-reload'
