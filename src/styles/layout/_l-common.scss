@@ -39,10 +39,6 @@ a img {
 background: none;
 }
 
-a:hover img {
-	@include opacity(0.6);
-}
-
 /* clearfix */
 .clearfix {
 	@include clearfix;

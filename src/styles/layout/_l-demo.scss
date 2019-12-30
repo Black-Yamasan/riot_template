@@ -19,7 +19,7 @@
       height: 22px;
       border-radius: 0;
       font-size: 12px;
-      @include translate(-15px, -40px);
+      transform: translate(-15px, -40px);
     }
   }
 }
