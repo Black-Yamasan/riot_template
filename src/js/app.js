@@ -1,3 +1,5 @@
-var riot = require('riot')
-var todo = require('../tags/todo.tag')
-riot.mount('todo', { title: 'todo' })
+import * as riot from 'riot'
+import hello from '../riot/hello.riot';
+
+riot.register('hello', hello);
+riot.mount('hello');
