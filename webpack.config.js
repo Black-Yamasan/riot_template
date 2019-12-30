@@ -12,7 +12,7 @@ const config = {
   }
 }
 const options = minimist(process.argv.slice(2), config);
-const isProd = (options.env === 'prod' || options.env === 'prod-site');
+const isProd = (options.env === 'prod');
 const modeValue = ( isProd ) ? 'production' : 'development';
 
 
