@@ -35,7 +35,7 @@ module.exports = {
   devtool: !isProd ? 'inline-source-map' : false,
   module: {
     rules: [{
-      test: /\.js$/,
+      test: /\.js|riot$/,
       use: [{
         loader: 'babel-loader',
         options: {
