@@ -21,12 +21,13 @@ glob.sync('./src/**/*.js', {
 }).map(function (file) {
   const regExp = new RegExp(`./src/js/`);
   const key = file.replace(regExp, 'assets/js/');
-  entries[key] = ['babel-polyfill', file];
+  entries[key] = [file];
 });
 
 module.exports = {
   entry: entries,
   mode: modeValue,
+  target: 'node',
   output: {
     path: path.resolve(__dirname, ''),
     filename: '[name]'
@@ -43,7 +44,10 @@ module.exports = {
           ]
         }
       }],
-      exclude: /node_modules/
+      exclude: {
+        include: /node_modules/,
+        exclude: /node_modules\/riot\//
+      }
     },
     {
       test: /\.riot$/,
