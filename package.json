@@ -16,13 +16,13 @@
   "author": "Black-Yamasan",
   "license": "MIT",
   "devDependencies": {
-    "@babel/core": "7.10.4",
-    "@babel/preset-env": "7.10.4",
-    "@riotjs/compiler": "4.9.2",
-    "@riotjs/webpack-loader": "4.0.3",
+    "@babel/core": "7.14.3",
+    "@babel/preset-env": "7.14.2",
+    "@riotjs/compiler": "5.4.2",
+    "@riotjs/webpack-loader": "5.0.0",
     "@webcomponents/template": "1.4.2",
-    "babel-loader": "8.1.0",
-    "browser-sync": "2.26.7",
+    "babel-loader": "8.2.2",
+    "browser-sync": "2.26.14",
     "core-js": "3.6.1",
     "del": "5.1.0",
     "glob": "7.1.6",
@@ -37,9 +37,9 @@
     "gulp-watch": "5.0.1",
     "gulp4-run-sequence": "1.0.1",
     "regenerator": "0.14.5",
-    "riot": "4.13.2",
-    "terser-webpack-plugin": "2.3.7",
-    "webpack": "4.43.0",
-    "webpack-stream": "5.2.1"
+    "riot": "5.4.2",
+    "terser-webpack-plugin": "5.1.2",
+    "webpack": "5.37.1",
+    "webpack-stream": "6.1.2"
   }
 }

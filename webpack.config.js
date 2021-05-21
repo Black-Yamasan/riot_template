@@ -44,10 +44,7 @@ module.exports = {
           ]
         }
       }],
-      exclude: {
-        include: /node_modules/,
-        exclude: /node_modules\/riot\//
-      }
+      exclude: /node_modules/
     },
     {
       test: /\.riot$/,
@@ -83,5 +80,11 @@ module.exports = {
     new webpack.DefinePlugin({
       NODE_ENV: JSON.stringify(process.env.NODE_ENV),
     })
-  ]
-};
+  ],
+  resolve: {
+    extensions: ['.js', '.riot'],
+    alias: {
+      '@': path.resolve(__dirname, 'src'),
+    }
+  }
+}
