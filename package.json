@@ -35,8 +35,8 @@
     "gulp-watch": "5.0.1",
     "gulp4-run-sequence": "1.0.1",
     "riot": "5.4.2",
-    "terser-webpack-plugin": "5.1.2",
-    "webpack": "5.37.1",
+    "terser-webpack-plugin": "5.1.4",
+    "webpack": "5.47.0",
     "webpack-stream": "6.1.2"
   }
 }
