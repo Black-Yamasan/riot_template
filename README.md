@@ -37,7 +37,7 @@ Riot.jsを始める為のテンプレート
 
 - webpackのバージョンアップデート
 
-### ver 4.0.1
+### ver 4.0.0
 
 - Riot.jsのバージョンを6系にアップデート
 - webpack, gulp-sass, node-sass, @riotjs/compiler, @riotjs/webpack-loader のバージョンアップデート
