@@ -18,8 +18,8 @@
   "devDependencies": {
     "@babel/core": "7.14.3",
     "@babel/preset-env": "7.14.2",
-    "@riotjs/compiler": "5.4.2",
-    "@riotjs/webpack-loader": "5.0.0",
+    "@riotjs/compiler": "6.1.3",
+    "@riotjs/webpack-loader": "6.0.0",
     "babel-loader": "8.2.2",
     "browser-sync": "2.26.14",
     "del": "5.1.0",
