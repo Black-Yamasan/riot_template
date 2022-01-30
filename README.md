@@ -33,9 +33,14 @@ Riot.jsを始める為のテンプレート
 - Node.jsとnpmのバージョンを指定
 
 
-### ver. 3.0.01
+### ver. 3.0.1
 
 - webpackのバージョンアップデート
+
+### ver 4.0.1
+
+- Riot.jsのバージョンを6系にアップデート
+- webpack, gulp-sass, node-sass, @riotjs/compiler, @riotjs/webpack-loader のバージョンアップデート
 
 ## ファイル
 
