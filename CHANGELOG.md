@@ -1,3 +1,7 @@
+## ver 4.0.2
+
+- webpack, glob, browser-sync のバージョンアップデート
+
 ## ver 4.0.1
 
 - Nodeのバージョンを14系に変更
