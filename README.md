@@ -40,13 +40,13 @@ yarn
 #### ローカル開発用ビルド
 
 ```
-npm run dev
+npm run build:dev
 ```
 
 or 
 
 ```
-yarn dev
+yarn build:dev
 ```
 
 
@@ -66,11 +66,11 @@ yarn start
 #### 本番環境用ソースビルド
 
 ```
-npm run prod
+npm run build:prod
 ```
 
 or 
 
 ```
-yarn prod
+yarn build:prod
 ```
