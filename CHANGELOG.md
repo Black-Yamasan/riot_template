@@ -1,3 +1,7 @@
+## ver 5.0.0
+
+- gulp削除・jsとscssのビルドをwebpackへ移行
+
 ## ver 4.0.2
 
 - webpack, glob, browser-sync のバージョンアップデート

@@ -14,7 +14,6 @@ Riot.jsを始める為のテンプレート
 ├── package.json
 ├── src　　　　　　    ・・・ 開発に使用するソース一式
 │   ├── html         ・・・ htmlファイルを格納
-│   ├── images       ・・・ 画像ファイルを格納
 │   ├── js           ・・・ jsファイルを格納
 │   ├── riot         ・・・ riotを格納
 │   └── styles       ・・・ scssファイルを格納
