@@ -11,11 +11,11 @@ const config = {
   default: {
     env: process.env.NODE_ENV || 'dev'
   }
-}
+};
 const options = minimist(process.argv.slice(2), config);
 const isProd = (options.env === 'prod');
 const modeValue = ( isProd ) ? 'production' : 'development';
-const outputDirectoryName = isProd ? 'htdocs' : 'dist'
+const outputDirectoryName = isProd ? 'htdocs' : 'dist';
 
 glob.sync('./src/**/*.js', {
   ignore: './src/**/_*.js'
@@ -42,29 +42,72 @@ module.exports = {
     port: 9000,
   },
   module: {
-    rules: [{
-      test: /\.js|riot$/,
-      use: [{
-        loader: 'babel-loader',
-        options: {
-          presets: [
-            ['@babel/preset-env']
-          ]
-        }
-      }],
-      exclude: /node_modules/
-    },
-    {
+    rules: [
+      {
+        test: /\.js|riot$/,
+        use: [
+          {
+            loader: 'babel-loader',
+            options: {
+              presets: [
+                ['@babel/preset-env']
+              ]
+            }
+          }
+        ],
+        exclude: /node_modules/
+      },
+      {
       test: /\.riot$/,
-      exclude: /node_modules/,
-      use: [{
-        loader: '@riotjs/webpack-loader',
-        options: {
-          hot: false,
-          sourcemap: !isProd ? 'inline-source-map' : false,
-        }
-      }]
-    }
+        exclude: /node_modules/,
+        use: [
+          {
+            loader: '@riotjs/webpack-loader',
+            options: {
+              hot: false,
+              sourcemap: !isProd ? 'inline-source-map' : false,
+            }
+          }
+        ]
+      },
+      {
+        test: /\.s[ac]ss$/i,
+        use: [
+          {
+            loader: 'style-loader'
+          },
+          {
+            loader: 'css-loader',
+            options: {
+              url: true,
+              sourceMap: !isProd,
+              importLoaders: 2
+            }
+          },
+          {
+            loader: 'postcss-loader',
+            options: {
+              postcssOptions: {
+                plugins: [
+                  require('cssnano')({
+                    autoprefixer: false
+                  })
+                ]
+              },
+              sourceMap: !isProd
+            }
+          },
+          {
+            loader: 'sass-loader',
+            options: {
+              sourceMap: !isProd,
+              sassOptions: {
+                outputStyle: 'expanded'
+              }
+            }
+          }
+        ]
+      }
     ]
   },
   optimization: {
@@ -96,7 +139,7 @@ module.exports = {
           to: path.resolve(__dirname, `${outputDirectoryName}/`)
         }
       ],
-    }), 
+    })
   ],
   resolve: {
     extensions: ['.js', '.riot'],
