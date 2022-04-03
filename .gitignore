@@ -5,4 +5,4 @@ htdocs/*
 yarn.lock
 npm-debug.log
 yarn-error.log
-src/pc/images/*
+
