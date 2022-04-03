@@ -21,16 +21,15 @@ glob.sync('./src/**/*.js', {
   ignore: './src/**/_*.js'
 }).map(function (file) {
   const regExp = new RegExp(`./src/js/`);
-  const key = file.replace(regExp, `./${outputDirectoryName}/assets/js/`);
+  const key = file.replace(regExp, `./assets/js/`);
   entries[key] = [file];
 });
 
 module.exports = {
   entry: entries,
   mode: modeValue,
-  target: 'node',
   output: {
-    path: path.resolve(__dirname, ''),
+    path: path.resolve(__dirname, `${outputDirectoryName}`),
     filename: '[name]'
   },
   devtool: !isProd ? 'inline-source-map' : false,
@@ -38,8 +37,10 @@ module.exports = {
     static: {
       directory: path.join(__dirname, outputDirectoryName),
     },
+    watchFiles: ['./src/**/*', `./${outputDirectoryName}/**/*`],
     compress: isProd,
     port: 9000,
+    hot: true
   },
   module: {
     rules: [

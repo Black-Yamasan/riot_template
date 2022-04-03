@@ -8,9 +8,9 @@
     "npm": "6.x"
   },
   "scripts": {
-    "build": "npx webpack",
-    "build:prod": "npx webpack --env prod",
-    "start": "npx webpack serve",
+    "build": "npx webpack --env dev --target node",
+    "build:prod": "npx webpack --env prod --target node",
+    "start": "npx webpack serve --target web",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Black-Yamasan",
