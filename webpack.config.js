@@ -2,7 +2,7 @@ const webpack = require('webpack');
 const TerserPlugin = require('terser-webpack-plugin');
 const path = require('path');
 const glob = require('glob');
-const CopyPlugin = require("copy-webpack-plugin");
+const CopyPlugin = require('copy-webpack-plugin');
 const minimist = require('minimist');
 
 const entries = {};
@@ -17,11 +17,12 @@ const isProd = (options.env === 'prod');
 const modeValue = ( isProd ) ? 'production' : 'development';
 const outputDirectoryName = isProd ? 'htdocs' : 'dist';
 
-glob.sync('./src/**/*.js', {
-  ignore: './src/**/_*.js'
+glob.sync('./src/**/*.ts', {
+  ignore: './src/**/_*.ts'
 }).map(function (file) {
-  const regExp = new RegExp(`./src/js/`);
-  const key = file.replace(regExp, `./assets/js/`);
+  const regExp = new RegExp(`./src/scripts/`);
+  const clonedFile = file.slice()
+  const key = clonedFile.replace(regExp, `./assets/scripts/`).replace(/\.ts/, '.js')
   entries[key] = [file];
 });
 
@@ -39,35 +40,37 @@ module.exports = {
     },
     watchFiles: ['./src/**/*', `./${outputDirectoryName}/**/*`],
     compress: isProd,
-    port: 9000,
+    port: 3000,
     hot: true
   },
   module: {
     rules: [
       {
-        test: /\.js|riot$/,
-        use: [
-          {
-            loader: 'babel-loader',
-            options: {
-              presets: [
-                ['@babel/preset-env']
-              ]
-            }
-          }
-        ],
-        exclude: /node_modules/
-      },
-      {
       test: /\.riot$/,
         exclude: /node_modules/,
         use: [
           {
+            loader: 'ts-loader',
+            options: {
+              transpileOnly: !isProd,
+              appendTsSuffixTo: [/\.riot$/]
+            }
+          },
+          {
             loader: '@riotjs/webpack-loader',
             options: {
-              hot: false,
+              hot: !isProd,
               sourcemap: !isProd ? 'inline-source-map' : false,
             }
+          }
+        ]
+      },
+      {
+        test: /\.ts$/,
+        use: [
+          {
+            loader: 'ts-loader',
+            options: {}
           }
         ]
       },
@@ -143,7 +146,7 @@ module.exports = {
     })
   ],
   resolve: {
-    extensions: ['.js', '.riot'],
+    extensions: ['.js', '.riot', '.ts'],
     alias: {
       '@': path.resolve(__dirname, 'src'),
     }
