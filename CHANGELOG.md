@@ -1,3 +1,7 @@
+## ver 6.0.0
+
+- TypeScriptに対応
+
 ## ver 5.0.0
 
 - gulp削除・jsとscssのビルドをwebpackへ移行
