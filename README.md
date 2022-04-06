@@ -5,20 +5,20 @@ Riot.jsを始める為のテンプレート
 ## ファイル
 
 ```
+├── CHANGELOG.md
 ├── LICENSE
 ├── README.md
-├── babel.config.js
+├── RiotFile.d.ts
 ├── dist 　　　　　　　・・・ ローカル開発時に生成
-├── gulpfile.js
 ├── htdocs　　　　　　 ・・・ 本番ソースビルド時に生成
 ├── package.json
 ├── src　　　　　　    ・・・ 開発に使用するソース一式
 │   ├── html         ・・・ htmlファイルを格納
-│   ├── js           ・・・ jsファイルを格納
+│   ├── scripts      ・・・ tsファイルを格納
 │   ├── riot         ・・・ riotを格納
 │   └── styles       ・・・ scssファイルを格納
-├── webpack.config.js
-└── yarn.lock
+├── tsconfig.json
+└── webpack.config.js
 ```
 
 
