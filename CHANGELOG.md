@@ -1,3 +1,7 @@
+## ver 6.0.1
+
+- @babel/core を削除
+
 ## ver 6.0.0
 
 - TypeScriptに対応
