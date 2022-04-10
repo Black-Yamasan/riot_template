@@ -16,7 +16,6 @@
   "author": "Black-Yamasan",
   "license": "MIT",
   "devDependencies": {
-    "@babel/core": "7.14.3",
     "@riotjs/compiler": "6.1.3",
     "@riotjs/hot-reload": "6.0.0",
     "@riotjs/webpack-loader": "6.0.0",
