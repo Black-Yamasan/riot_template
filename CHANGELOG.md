@@ -1,3 +1,7 @@
+## ver 6.0.2
+
+- webpack-dev-server バージョンアップデート
+
 ## ver 6.0.1
 
 - @babel/core を削除
