@@ -18,7 +18,7 @@ const modeValue = ( isProd ) ? 'production' : 'development';
 const outputDirectoryName = isProd ? 'htdocs' : 'dist';
 
 glob.sync('./src/**/*.ts', {
-  ignore: './src/**/_*.ts'
+  ignore: ['./src/**/_*.ts', './src/**/types.ts']
 }).map(function (file) {
   const regExp = new RegExp(`./src/scripts/`);
   const clonedFile = file.slice()
