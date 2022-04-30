@@ -1,3 +1,7 @@
+## ver 6.0.3
+
+- npmのバージョンを8系に更新
+
 ## ver 6.0.2
 
 - webpack-dev-server バージョンアップデート
