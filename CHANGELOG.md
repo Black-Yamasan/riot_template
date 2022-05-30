@@ -1,3 +1,8 @@
+## ver 6.0.5
+
+- webpack バージョンアップデート
+- terser-webpack-plugin バージョンアップデート
+
 ## ver 6.0.4
 
 - Node.jsのバージョンを16系に変更
