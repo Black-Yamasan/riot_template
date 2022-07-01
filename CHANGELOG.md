@@ -1,3 +1,7 @@
+## ver 6.0.6
+
+- sass-loader, ts-node, cssnano, webpack-stream バージョンアップデート
+
 ## ver 6.0.5
 
 - webpack バージョンアップデート
