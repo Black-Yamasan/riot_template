@@ -22,7 +22,6 @@
     "copy-webpack-plugin": "10.2.4",
     "css-loader": "6.7.1",
     "cssnano": "5.1.12",
-    "del": "5.1.0",
     "glob": "7.2.0",
     "node-sass": "7.0.3",
     "postcss-loader": "7.0.1",
