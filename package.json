@@ -22,7 +22,7 @@
     "copy-webpack-plugin": "11.0.0",
     "css-loader": "6.7.1",
     "cssnano": "5.1.12",
-    "glob": "7.2.0",
+    "glob": "8.0.3",
     "node-sass": "7.0.3",
     "postcss-loader": "7.0.1",
     "riot": "6.1.2",
