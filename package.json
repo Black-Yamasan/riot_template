@@ -24,7 +24,7 @@
     "cssnano": "5.1.12",
     "del": "5.1.0",
     "glob": "7.2.0",
-    "node-sass": "7.0.1",
+    "node-sass": "7.0.3",
     "postcss-loader": "7.0.1",
     "riot": "6.1.2",
     "sass-loader": "13.0.2",
