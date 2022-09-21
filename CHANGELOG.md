@@ -1,3 +1,9 @@
+## ver 6.0.8
+
+- node-sass, copy-webpack-plugin, glob, cssnano, webpack-cli, webpack, terser-webpack-plugin, ts-node バージョンアップデート
+- del 削除
+- minimist 追加。ビルドエラー修正
+
 ## ver 6.0.7
 
 - postcss-loader バージョンアップデート
