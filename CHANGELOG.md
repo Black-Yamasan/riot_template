@@ -1,3 +1,7 @@
+## ver 6.0.9
+
+- minimist バージョンアップデート
+
 ## ver 6.0.8
 
 - node-sass, copy-webpack-plugin, glob, cssnano, webpack-cli, webpack, terser-webpack-plugin, ts-node バージョンアップデート
