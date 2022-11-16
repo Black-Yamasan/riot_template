@@ -24,7 +24,7 @@
     "cssnano": "5.1.13",
     "glob": "8.0.3",
     "minimist": "1.2.7",
-    "node-sass": "7.0.3",
+    "node-sass": "8.0.0",
     "postcss-loader": "7.0.1",
     "riot": "6.1.2",
     "sass-loader": "13.2.0",
