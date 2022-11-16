@@ -21,7 +21,7 @@
     "@riotjs/webpack-loader": "6.0.0",
     "copy-webpack-plugin": "11.0.0",
     "css-loader": "6.7.1",
-    "cssnano": "5.1.13",
+    "cssnano": "5.1.14",
     "glob": "8.0.3",
     "minimist": "1.2.7",
     "node-sass": "8.0.0",
