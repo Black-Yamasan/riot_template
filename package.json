@@ -20,7 +20,7 @@
     "@riotjs/hot-reload": "6.0.0",
     "@riotjs/webpack-loader": "6.0.0",
     "copy-webpack-plugin": "11.0.0",
-    "css-loader": "6.7.1",
+    "css-loader": "6.7.2",
     "cssnano": "5.1.14",
     "glob": "8.0.3",
     "minimist": "1.2.7",
