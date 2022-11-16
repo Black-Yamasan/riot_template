@@ -1,3 +1,7 @@
+## ver 6.0.10
+
+- typescript, webpack, sass-loader, node-sass, cssnano, css-loader バージョンアップデート
+
 ## ver 6.0.9
 
 - minimist バージョンアップデート
