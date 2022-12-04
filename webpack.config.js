@@ -1,21 +1,13 @@
-const webpack = require('webpack');
+const webpack = require('webpack')
 const TerserPlugin = require('terser-webpack-plugin');
-const path = require('path');
-const glob = require('glob');
-const CopyPlugin = require('copy-webpack-plugin');
-const minimist = require('minimist');
+const path = require('path')
+const glob = require('glob')
+const CopyPlugin = require('copy-webpack-plugin')
 
 const entries = {};
-const config = {
-  string: 'env',
-  default: {
-    env: process.env.NODE_ENV || 'dev'
-  }
-};
-const options = minimist(process.argv.slice(2), config);
-const isProd = (options.env === 'prod');
-const modeValue = ( isProd ) ? 'production' : 'development';
-const outputDirectoryName = isProd ? 'htdocs' : 'dist';
+const isProd = process.env.NODE_ENV === 'production'
+const modeValue = isProd ? 'production' : 'development'
+const outputDirectoryName = isProd ? 'htdocs' : 'dist'
 
 glob.sync('./src/**/*.ts', {
   ignore: ['./src/**/_*.ts', './src/**/types.ts']
@@ -23,8 +15,8 @@ glob.sync('./src/**/*.ts', {
   const regExp = new RegExp(`./src/scripts/`);
   const clonedFile = file.slice()
   const key = clonedFile.replace(regExp, `./assets/scripts/`).replace(/\.ts/, '.js')
-  entries[key] = [file];
-});
+  entries[key] = [file]
+})
 
 module.exports = {
   entry: entries,

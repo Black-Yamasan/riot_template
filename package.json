@@ -8,9 +8,9 @@
     "npm": "8.x"
   },
   "scripts": {
-    "build:dev": "npx webpack --env dev --target node",
-    "build:prod": "npx webpack --env prod --target node",
-    "start": "npx webpack serve --target web",
+    "build:dev": "NODE_ENV=development npx webpack --target node",
+    "build:prod": "NODE_ENV=production npx webpack --target node",
+    "start": "NODE_ENV=development npx webpack serve --target web",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Black-Yamasan",
@@ -23,7 +23,6 @@
     "css-loader": "6.7.2",
     "cssnano": "5.1.14",
     "glob": "8.0.3",
-    "minimist": "1.2.7",
     "node-sass": "8.0.0",
     "postcss-loader": "7.0.1",
     "riot": "6.1.2",
