@@ -1,3 +1,7 @@
+## ver 6.1.0
+
+- minimist 削除。.envに変更
+
 ## ver 6.0.10
 
 - typescript, webpack, sass-loader, node-sass, cssnano, css-loader バージョンアップデート
