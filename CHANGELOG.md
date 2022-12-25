@@ -1,3 +1,7 @@
+## ver 6.1.1
+
+- ts-loader バージョンアップデート
+
 ## ver 6.1.0
 
 - minimist 削除。.envに変更
