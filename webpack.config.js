@@ -11,7 +11,7 @@ const outputDirectoryName = isProd ? 'htdocs' : 'dist'
 
 glob.sync('./src/**/*.ts', {
   ignore: ['./src/**/_*.ts', './src/**/types.ts']
-}).map(function (file) {
+}).map((file) => {
   const regExp = new RegExp(`./src/scripts/`);
   const clonedFile = file.slice()
   const key = clonedFile.replace(regExp, `./assets/scripts/`).replace(/\.ts/, '.js')
