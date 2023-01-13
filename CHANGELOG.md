@@ -1,3 +1,8 @@
+## ver 7.0.0
+
+- Riot.jsのバージョンを7系にアップデート
+- typescript, webpack, css-loader, postcss-loader のバージョンアップデート
+
 ## ver 6.1.1
 
 - ts-loader バージョンアップデート
