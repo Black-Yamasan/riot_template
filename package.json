@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "engines": {
-    "node": "16.x",
-    "npm": "8.x"
+    "node": ">=16",
+    "npm": ">=8"
   },
   "scripts": {
     "build:dev": "NODE_ENV=development npx webpack --target node",
