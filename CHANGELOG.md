@@ -1,3 +1,7 @@
+## ver 7.0.2
+
+- webpack, webpack-dev-server, cssnano, postcss-loader, style-loader バージョンアップデート
+
 ## ver 7.0.1
 
 - glob のバージョンをアップデート
