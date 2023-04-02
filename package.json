@@ -27,7 +27,7 @@
     "postcss-loader": "7.1.0",
     "riot": "7.1.0",
     "sass-loader": "13.2.0",
-    "style-loader": "3.3.1",
+    "style-loader": "3.3.2",
     "terser-webpack-plugin": "5.3.6",
     "ts-loader": "9.4.2",
     "ts-node": "10.9.1",
