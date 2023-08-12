@@ -23,7 +23,7 @@
     "css-loader": "6.8.1",
     "cssnano": "6.0.1",
     "glob": "8.1.0",
-    "postcss-loader": "7.1.0",
+    "postcss-loader": "7.3.3",
     "riot": "7.1.0",
     "sass": "1.63.6",
     "sass-loader": "13.2.0",
