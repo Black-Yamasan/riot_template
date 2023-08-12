@@ -1,3 +1,8 @@
+## ver 7.1.0
+
+- node-sass 削除, sass 追加
+- css-loader, cssnano, postcss-loader, sass-loader, style-loader バージョンアップデート
+
 ## ver 7.0.3
 
 - Node.jsのバージョンを18系に更新
