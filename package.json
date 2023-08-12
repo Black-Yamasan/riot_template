@@ -1,11 +1,11 @@
 {
   "name": "riot_template",
-  "version": "7.0.2",
+  "version": "7.0.3",
   "description": "",
   "main": "index.js",
   "engines": {
-    "node": ">=16",
-    "npm": ">=8"
+    "node": ">=18",
+    "npm": ">=9"
   },
   "scripts": {
     "build:dev": "NODE_ENV=development npx webpack --target node",

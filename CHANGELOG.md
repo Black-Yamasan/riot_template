@@ -1,3 +1,8 @@
+## ver 7.0.3
+
+- Node.jsのバージョンを18系に更新
+- npmのバージョンを9系に更新
+
 ## ver 7.0.2
 
 - webpack, webpack-dev-server, cssnano, postcss-loader, style-loader バージョンアップデート
